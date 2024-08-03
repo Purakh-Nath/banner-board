@@ -22,10 +22,9 @@ const HomePage: React.FC = () => {
     <div>
       {banners.map((banner) => (
         <BannerImageComp
-          key={banner.id}
+          background={''} key={banner.id}
           {...banner}
-          onEdit={() => handleEdit(banner)}
-        />
+          onEdit={() => handleEdit(banner)}        />
       ))}
       {isEditing && currentBanner && (
         <EditBannerTemplateBs
